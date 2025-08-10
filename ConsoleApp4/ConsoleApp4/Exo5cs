@@ -1,0 +1,64 @@
+using System;
+namespace ConsoleApp1
+{
+    class Program
+    {
+       private static void Main(string[] args)
+        {
+            //bool b = true;
+            //for (int j = 0; j < 10; j++)
+            //{
+            //    Console.WriteLine(j);
+            //}
+            //int i = 0;
+            //while (i<10)
+            //{
+            //     Console.WriteLine(i);
+            //    i++;
+            //}
+            //int[] test = new int[6];
+            // for (int i = 0; i < test.Length; i++)
+            //{
+            //  test[i] = i + 1;
+            //  Console.WriteLine(test[i]);
+            // }
+            //Pause();
+            //for (int i = 100; i > 0; i--)
+            //for (int i = 100; i > 0; i =i/2)
+            // {
+            //     Console.WriteLine(i);
+            // }
+            //  Pause();
+            // int k = 0;
+            //do
+            //{
+            //  Console.WriteLine(k);
+            //   k++;
+            // }
+            //while (k < 10);
+
+            string[] villes = new string[5] { "Paris", "Lyon", "Marseille", "Lille", "Nantes" };
+
+            //foreach (string s in villes)
+            for (int i = 0; i < villes.Length; i++)
+            {
+                villes[i] = villes[(i + 1) % villes.Length];
+                //Console.WriteLine(villes[i]);
+                continue;
+                Console.WriteLine(villes[i]);
+                //break;
+            }
+            //{
+            //    Console.WriteLine(s);
+           // }
+
+            Pause();
+        }
+
+        private static void Pause()
+        {
+            Console.WriteLine("Appuyez sur une touche pour continuer...");
+            Console.ReadKey(true);
+        }
+    }
+}
